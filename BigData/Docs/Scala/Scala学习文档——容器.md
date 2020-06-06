@@ -4,9 +4,9 @@ title: Scala学习文档——容器
 date: 2020-06-05 09:02:57
 tags: [大数据,编程语言]
 categories: [大数据,Scala]
-#password: 5201314
+password: 5201314
 ---
-### 数据结构（Collection 容器）
+# Collection （容器）
 
 ---
 
@@ -30,22 +30,22 @@ categories: [大数据,Scala]
 
     > 这些都是`高级抽象类`或`特质`。例如，所有容器的基本特质（trait）是Traverable特质。它为所有的容器定义了公用的foreach方法，用于对容器元素进行遍历操作
 
-    ![](https://github.com/CharlieTao/CharlieTao.github.source/blob/master/BigData/Scala/Scala%E5%AE%B9%E5%99%A8/scala.colleection.png?raw=true )
+    ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.png?raw=true)
     
 
   - 下图显示了scala.collection.immutable（`不可变`）包中所有的容器类
 
-    ![](https://github.com/CharlieTao/CharlieTao.github.source/blob/master/BigData/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.immutable.png?raw=true)
+    ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.immutable.png?raw=true)
 
     
 
   - 下图显示了scala.collection.mutable（`可变`）中的所有容器类
 
-    ![](https://github.com/CharlieTao/CharlieTao.github.source/blob/master/BigData/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.mutable.png?raw=true)
+    ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.mutable.png?raw=true)
 
     
 
-#### 列表（List）
+## 1. 列表（List）
 
 ---
 
@@ -80,24 +80,22 @@ var strList = List("Bigdata", "Hadoop", "Spark")
 
   
 
-#### 集合（Set）
+## 2. 集合（Set）
 
 ---
 
-#### 映射（Map）
+## 3. 映射（Map）
 
 ---
 
-#### 迭代器（Iterator）
+## 4. 迭代器（Iterator）
 
 ---
 
-#### 数组（Array）
+## 5. 数组（Array）
 
 ---
 
-#### 元组（Tuple）
+## 6. 元组（Tuple）
 
 ---
-
-

@@ -1,5 +1,5 @@
 ---
-layout: photo
+layout: post
 title: Hadoop-2.7.7安装文档
 date: 2020-06-07 08:50:21
 tags: [大数据]
@@ -51,7 +51,7 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop- 2.7.7/had
 
 ## 1. 修改配置文件：
 
-- apache-hadoop-2.7.7/etc/hadoop/ core-site.xml
+- apache-hadoop-2.7.7/etc/hadoop/core-site.xml
 ```xml
 <configuration>
     <!-- hdfs地址，ha模式中是连接到nameservice -->

@@ -3,7 +3,7 @@ layout: post
 title: 初识Linux
 date: 2020-06-12 05:56:02
 tags: [操作系统,Linux]
-categories: [操作系统]
+categories: [Linux]
 password: 5201314
 ---
 

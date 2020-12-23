@@ -13,6 +13,8 @@ password: 5201314
 2. 提供HQL（Hive SQL）查询功能
 3. Hive本质上是将SQL**翻译**转换成MapReduce任务执行
 
+<!-- more -->
+
 # 为什么使用Hive（MapReduce、Spark）？
 
 1. MR在实现复杂逻辑查询的时候，成本高、难度大。

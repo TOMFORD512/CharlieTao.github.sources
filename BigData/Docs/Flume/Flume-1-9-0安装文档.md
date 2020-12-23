@@ -12,6 +12,8 @@ password: 5201314
 
 > 注：Flume安装的前提条件取决于Flume的Sink类型。如果为KafkaSink则需要安装Kafka，如果为HDFS Sink则需要安装Hadoop，以此类推。
 
+<!-- more -->
+
 # 下载
 
 ---

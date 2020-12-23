@@ -16,6 +16,7 @@ password: 5201314
 >1. 虽然HBase内部存在Zookeeper，但是业内不推荐这种做法。建议使用外部自行安装的Zookeeper进行管理，以便好的集成大数据其他组件。
 >2. HBase与Hive相似，数据存储在HDFS上，因此需要提前搭建好Hadoop
 
+<!-- more -->
 
 # 角色分类
 |  机器名  | bigdata001  |  bigdata002 | bigdata003  |
@@ -96,6 +97,7 @@ export HBASE_PID_DIR=/home/worker/software/hbase/conf/hadoop/pids
 ```
 
 - 更改conf/regionservers⽂件
+
 ```properties
 #在该文件中添加你的集群中即将充当HRegionserver角色的机器名
 bigdata1

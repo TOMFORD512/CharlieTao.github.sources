@@ -11,6 +11,9 @@ password: 5201314
 
 ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Linux/操作系统发展史.png?raw=true)
 
+
+<!-- more -->
+
 ## 计算机
 
 ### 按照粗粒度划分可以分为三大部分：

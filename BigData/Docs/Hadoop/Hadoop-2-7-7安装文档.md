@@ -15,6 +15,8 @@ password: 5201314
 
 >注：搭配的Spark版本是2.3.4
 
+<!-- more -->
+
 # 角色分配
 
 
@@ -52,6 +54,7 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop- 2.7.7/had
 ## 1. 修改配置文件：
 
 - apache-hadoop-2.7.7/etc/hadoop/core-site.xml
+
 ```xml
 <configuration>
     <!-- hdfs地址，ha模式中是连接到nameservice -->
@@ -87,6 +90,7 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hadoop/common/hadoop- 2.7.7/had
 ```
 
 - apache-hadoop-2.7.7/etc/hadoop/hadoop-env.sh
+
 ```bash
 export JAVA_HOME=/home/xuanfu01/software/jdk
 export HDFS_NAMENODE_USER=root
@@ -100,6 +104,7 @@ export YARN_RESOURCEMANAGER_USER=root
 ```
 
 - apache-hadoop-2.7.7/etc/hadoop/hdfs-site.xml
+
 ```xml
 <configuration>
     <!-- 指定副本数，不能超过机器节点数 -->
@@ -207,6 +212,7 @@ export YARN_RESOURCEMANAGER_USER=root
 ```
 
 - apache-hadoop-2.7.7/etc/hadoop/mapred-site.xml
+
 ```xml
 <configuration>
     <!-- 使用Yarn作为资源调度 -->
@@ -218,6 +224,7 @@ export YARN_RESOURCEMANAGER_USER=root
 ```
 
 - apache-hadoop-2.7.7/etc/hadoop/yarn-site.xml
+
 ```xml
 <configuration>
     <!-- 启用HA高可用性 -->
@@ -378,6 +385,7 @@ export YARN_RESOURCEMANAGER_USER=root
 ## 3. 配置环境变量
 
 > 在此不做过多赘述，以下为本⼈服务器的所有环境变量（/home/xuanfu01/.bashrc）
+
 ```bash
 # .bashrc
 # Source global definitions

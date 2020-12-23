@@ -15,6 +15,7 @@ password: 5201314
 >3. NTP服务器：阿里云（ntp.aliyun.com）
 >4. 同步频率：开机自动同步
 
+<!-- more -->
 
 # NTP安装与配置
 

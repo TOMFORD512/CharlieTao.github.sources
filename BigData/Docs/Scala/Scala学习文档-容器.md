@@ -2,8 +2,8 @@
 layout: photo
 title: Scala学习文档——容器
 date: 2020-06-05 09:02:57
-tags: [大数据,编程语言]
-categories: [大数据,Scala]
+tags: [Scala]
+categories: [编程语言,Scala]
 password: 5201314
 ---
 # Collection （容器）

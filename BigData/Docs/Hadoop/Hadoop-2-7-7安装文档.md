@@ -2,8 +2,8 @@
 layout: post
 title: Hadoop-2.7.7安装文档
 date: 2020-06-07 08:50:21
-tags: [大数据]
-categories: [大数据,Hadoop]
+tags: [Hadoop]
+categories: [Bigdata,Hadoop]
 password: 5201314
 ---
 

@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Linux时间同步
+title: CnetOS时间同步
 date: 2020-06-13 05:31:01
-tags: [操作系统,CentOS]
-categories: [Linux]
+tags: [CentOS]
+categories: [Linux,CentOS]
 password: 5201314
 ---
 
 # 前言
 
->本文所述的Linux时间同步方法用于CDH安装时准备工作。以下是服务器的一些基本信息:
+>本文所述的CnetOS时间同步方法用于CDH安装时准备工作。以下是服务器的一些基本信息:
 >1. 环境：自建虚拟机
 >2. 系统：CentOS 7
 >3. NTP服务器：阿里云（ntp.aliyun.com）

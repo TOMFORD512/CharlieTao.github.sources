@@ -2,8 +2,8 @@
 layout: post
 title: 初识Hive
 date: 2020-06-13 05:41:59
-tags: [大数据]
-categories: [大数据,Hive]
+tags: [Hive]
+categories: [Bigdata,Hive]
 password: 5201314
 ---
 

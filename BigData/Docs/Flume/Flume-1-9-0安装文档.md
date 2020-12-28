@@ -2,8 +2,8 @@
 layout: photo
 title: Flume-1.9.0安装文档
 date: 2020-06-05 23:28:09
-tags: [大数据]
-categories: [大数据,Flume]
+tags: [Flume]
+categories: [Bigdata,Flume]
 password: 5201314
 ---
 # 前提条件

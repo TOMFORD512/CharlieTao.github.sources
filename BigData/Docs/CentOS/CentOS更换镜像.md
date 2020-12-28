@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Linux更换镜像
+title: CnetOS更换镜像
 date: 2020-06-13 05:23:52
-tags: [操作系统,CentOS]
-categories: [Linux]
+tags: [CentOS]
+categories: [Linux,CentOS]
 password: 5201314
 ---
 

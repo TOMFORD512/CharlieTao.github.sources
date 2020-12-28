@@ -2,8 +2,8 @@
 layout: photo
 title: HBase-1.3.6安装文档
 date: 2020-06-07 22:09:46
-tags: [大数据, 数据库]
-categories: [大数据,HBase]
+tags: [HBase]
+categories: [Bigdata,HBase]
 password: 5201314
 ---
 

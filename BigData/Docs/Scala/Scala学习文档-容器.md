@@ -34,18 +34,17 @@ password: 5201314
 
     ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.png?raw=true)
     
-
-  - 下图显示了scala.collection.immutable（`不可变`）包中所有的容器类
-
-    ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.immutable.png?raw=true)
-
-    
-
-  - 下图显示了scala.collection.mutable（`可变`）中的所有容器类
-
-    ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.mutable.png?raw=true)
-
-    
+- 下图显示了scala.collection.immutable（`不可变`）包中所有的容器类
+  
+  ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.immutable.png?raw=true)
+  
+  
+  
+- 下图显示了scala.collection.mutable（`可变`）中的所有容器类
+  
+  ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.mutable.png?raw=true)
+  
+  
 
 ## 1. 列表（List）
 

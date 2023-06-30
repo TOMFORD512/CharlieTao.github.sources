@@ -4,15 +4,15 @@ title: 初识Linux
 date: 2020-06-12 05:56:02
 tags: [Linux]
 categories: [操作系统,Linux]
-password: 5201314
 ---
+
+## 前言
+
+<!-- more -->
 
 ## 操作系统发展史
 
 ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Linux/操作系统发展史.png?raw=true)
-
-
-<!-- more -->
 
 ## 计算机
 

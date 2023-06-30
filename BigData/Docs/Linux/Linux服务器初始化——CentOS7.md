@@ -1,4 +1,14 @@
-# Linux服务器初始化—CentOS7
+---
+layout: post
+title: Linux服务器初始化——CentOS7
+date: 2020-06-12 06:56:02
+tags: [Linux]
+categories: [操作系统,Linux]
+---
+
+### 前言
+
+<!-- more -->
 
 ### 1. 查看服务器的CentOS版本
 

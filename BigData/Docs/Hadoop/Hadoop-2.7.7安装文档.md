@@ -4,18 +4,20 @@ title: Hadoop-2.7.7安装文档
 date: 2020-06-07 08:50:21
 tags: [Hadoop]
 categories: [Bigdata,Hadoop]
-password: 5201314
 ---
 
+# 前言
+
+<!-- more -->
+
 # 前提条件
+
 1. 免密登录
 2. 关闭防⽕墙
 3. JDK的安装
 4. Zookeeper的安装
 
 >注：搭配的Spark版本是2.3.4
-
-<!-- more -->
 
 # 角色分配
 

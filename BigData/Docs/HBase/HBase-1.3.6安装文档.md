@@ -4,10 +4,14 @@ title: HBase-1.3.6安装文档
 date: 2020-06-07 22:09:46
 tags: [HBase]
 categories: [Bigdata,HBase]
-password: 5201314
 ---
 
+# 前言
+
+<!-- more -->
+
 # 前提条件
+
 1. Zookeeper的安装
 2. Hadoop的安装
 3. JDK的安装
@@ -15,8 +19,6 @@ password: 5201314
 >注：
 >1. 虽然HBase内部存在Zookeeper，但是业内不推荐这种做法。建议使用外部自行安装的Zookeeper进行管理，以便好的集成大数据其他组件。
 >2. HBase与Hive相似，数据存储在HDFS上，因此需要提前搭建好Hadoop
-
-<!-- more -->
 
 # 角色分类
 |  机器名  | bigdata001  |  bigdata002 | bigdata003  |

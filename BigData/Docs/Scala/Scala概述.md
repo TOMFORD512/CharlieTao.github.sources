@@ -1,10 +1,16 @@
-## Scala概述
+---
+layout: photo
+title: Scala概述
+date: 2020-06-04 09:02:57
+tags: [Scala]
+categories: [编程语言,Scala]
+---
 
-```
-Scala版本：2.12.11
-```
+### 前言
 
+<!-- more -->
 
+<!--Scala版本：2.12.11-->
 
 **Scala是一门以Java虚拟机为运行环境并将面向对象和函数式编程的最佳特性结合在一起的静态类型编程语言。**
 

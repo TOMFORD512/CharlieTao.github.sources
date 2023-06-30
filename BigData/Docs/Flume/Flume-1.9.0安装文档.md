@@ -4,15 +4,16 @@ title: Flume-1.9.0安装文档
 date: 2020-06-05 23:28:09
 tags: [Flume]
 categories: [Bigdata,Flume]
-password: 5201314
 ---
+# 前言
+
+<!-- more -->
+
 # 前提条件
 
 ## JDK的安装
 
 > 注：Flume安装的前提条件取决于Flume的Sink类型。如果为KafkaSink则需要安装Kafka，如果为HDFS Sink则需要安装Hadoop，以此类推。
-
-<!-- more -->
 
 # 下载
 

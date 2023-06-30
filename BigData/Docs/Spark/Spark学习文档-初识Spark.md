@@ -3,16 +3,16 @@ title: Spark学习文档--初识Spark
 date: 2020-12-24 23:50:18
 tags: [Spark]
 categories: [Bigdata,Spark]
-password: 5201314
 ---
+
+# 前言
+
+<!-- more -->
 
 # 概述
 
 ## 1. 什么是Spark？
 Apache Spark用于大规模数据处理的统一分析引擎。
-
-
-<!-- more -->
 
 ## 2. 特点
 
@@ -45,9 +45,9 @@ Apache Spark用于大规模数据处理的统一分析引擎。
 Spark是通过借鉴Hadoop MapReduce发展而来的，继承了其分布式并行计算的优点，并改进了MapReduce明显的缺陷，具体体现在以下几个方面：
 
     (1) Spark把中间数据放在内存中，迭代式运算效率高。MapReduce中的计算结果是保存在磁盘上，这样势必会影响整体的运行速度，而Spark支持DAG图的分布式并行计算的编程框架，减少了迭代过程中数据的落地，提高了处理效率
-
+    
     (2) Spark的容错性高。Spark引进了弹性分布式数据集（Resilient Distributed Dataset，RDD）的概念，它是分布式在一组节点中的制度对象集合，这些集合是弹性的，如果数据一部分丢失，则可以根据 “血统” （即允许基于数据衍生过程）对它们进行重建。另外，在RDD计算时可以通过CheckPoint来实现容错，而CheckPoint有两种方式，即CheckPoint Data和Logging The Updates，用户可以控制采用哪种方式来实现容错。
-
+    
     (3)Spark更加通用。不像Hadoop只提供了Map和Reduce两种操作，Spark提供农的数据集操作类型有很多种，大致分为转换操作和行动操作两大类。转换操作包括 Map、Filter、FlatMap、Sample、GroupByKey、ReduceByKey、Union、Join、Cogroup、MapValues、Sort、和PartionBy等多种操作类型，行动操作包括Collect、Reduce、Lookup和Save等操作类型。另外，各个处理节点之间的通信模型不再像Hadoop只有Shuffle一种模式，用户可以命名、物化、控制中间结果的存储、分区等
 
 

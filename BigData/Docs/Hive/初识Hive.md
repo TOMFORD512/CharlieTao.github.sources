@@ -4,16 +4,17 @@ title: 初识Hive
 date: 2020-06-13 05:41:59
 tags: [Hive]
 categories: [Bigdata,Hive]
-password: 5201314
 ---
+
+# 前言
+
+<!-- more -->
 
 # 什么是Hive？
 
 1. 由Facebook实现并开源、基于Hadoop的**数据仓库的工具**
 2. 提供HQL（Hive SQL）查询功能
 3. Hive本质上是将SQL**翻译**转换成MapReduce任务执行
-
-<!-- more -->
 
 # 为什么使用Hive（MapReduce、Spark）？
 

@@ -4,8 +4,11 @@ title: Scala学习文档——容器
 date: 2020-06-05 09:02:57
 tags: [Scala]
 categories: [编程语言,Scala]
-password: 5201314
 ---
+# 前言
+
+<!-- more -->
+
 # Collection （容器）
 
 ---
@@ -33,7 +36,7 @@ password: 5201314
     > 这些都是`高级抽象类`或`特质`。例如，所有容器的基本特质（trait）是Traverable特质。它为所有的容器定义了公用的foreach方法，用于对容器元素进行遍历操作
 
     ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.png?raw=true)
-    
+  
 - 下图显示了scala.collection.immutable（`不可变`）包中所有的容器类
   
   ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Scala/Scala%E5%AE%B9%E5%99%A8/scala.collection.immutable.png?raw=true)

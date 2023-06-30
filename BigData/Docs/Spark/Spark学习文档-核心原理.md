@@ -3,8 +3,11 @@ title: Spark学习文档--核心原理
 date: 2020-12-26 23:56:07
 tags: [Spark]
 categories: [Bigdata,Spark]
-password: 5201314
 ---
+
+# 前言
+
+<!-- more -->
 
 # 消息通信原理
 
@@ -12,25 +15,23 @@ password: 5201314
 
 ## 基本概念
 ### 1. Application
-    
+
     表示本次运次的应用程序
 
 ### 2. Driver
-    
+
     表示main()函数，创建SparkContext。由SparkContext负责与CLusterManager通信，进行资源的申请、任务的分配和监控等。程序执行完毕后关闭SparkContext
 
-<!-- more -->
-
 ### 3. Executor
-    
+
     某个Application运行在Worker节点上的一个进程，该进程负责运行某些Task，负责将数据存在内存或者磁盘上。在Spark On Yarn模式下，其进程名称为CoarseGrainedExecutorBackend，一个CoarseGrainedExecutorBackend能运行Task的数据就取决于分配给它的CPU的个数
 
 ### 4. Worker
-    
+
     集群中可以运行Application的节点。在Standalone模式中指的是通过slave文件配置的worker节点，在Spark On Yarn模式中指的就是NodeManager节点
 
 ### 5. Task
-    
+
     在Executor进程中执行任务的工作单元，多个Task组成一个Stage
 
 ### 6. Job

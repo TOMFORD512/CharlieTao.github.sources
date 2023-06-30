@@ -3,8 +3,11 @@ title: Spark学习文档--运行流程
 date: 2020-12-27 23:57:49
 tags: [Spark]
 categories: [Bigdata,Spark]
-password: 5201314
 ---
+
+# 前言
+
+<!-- more -->
 
 # 基本概念
 
@@ -19,8 +22,6 @@ password: 5201314
 ```
     表示main()函数，创建SparkContext。由SparkContext负责与CLusterManager通信，进行资源的申请、任务的分配和监控等。程序执行完毕后关闭SparkContext
 ```
-
-<!-- more -->
 
 ## 3. Executor
 

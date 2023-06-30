@@ -7,6 +7,9 @@ categories: [Linux,CentOS]
 password: 5201314
 ---
 
+
+<!-- more -->
+
 # 前言
 
 >本文所述的CnetOS时间同步方法用于CDH安装时准备工作。以下是服务器的一些基本信息:
@@ -15,7 +18,6 @@ password: 5201314
 >3. NTP服务器：阿里云（ntp.aliyun.com）
 >4. 同步频率：开机自动同步
 
-<!-- more -->
 
 # NTP安装与配置
 

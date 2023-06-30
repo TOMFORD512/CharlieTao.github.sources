@@ -1,4 +1,14 @@
-## Scala的基本语法
+---
+layout: photo
+title: Scala学习文档——基础语法
+date: 2020-06-08 09:02:57
+tags: [Scala]
+categories: [编程语言,Scala]
+---
+
+### 前言
+
+<!-- more -->
 
 ```
 JAVA数据类型

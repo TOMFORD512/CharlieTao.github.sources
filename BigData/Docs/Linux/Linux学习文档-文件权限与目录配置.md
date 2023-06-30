@@ -4,6 +4,7 @@ title: Linux学习文档-文件权限与目录配置
 date: 2021-04-20 23:56:00
 tags: [Linux]
 categories: [Linux,文件、目录与磁盘]
+excerpt: 。。。
 ---
 
 ## 前言

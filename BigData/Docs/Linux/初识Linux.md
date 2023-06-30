@@ -4,6 +4,7 @@ title: 初识Linux
 date: 2020-06-12 05:56:02
 tags: [Linux]
 categories: [操作系统,Linux]
+excerpt: 。。。
 ---
 
 ## 前言

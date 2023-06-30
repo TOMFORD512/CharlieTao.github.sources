@@ -5,10 +5,8 @@ date: 2020-06-13 05:31:01
 tags: [CentOS]
 categories: [Linux,CentOS]
 password: 5201314
+excerpt: 。。。
 ---
-
-
-<!-- more -->
 
 # 前言
 

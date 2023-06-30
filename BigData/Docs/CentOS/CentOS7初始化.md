@@ -4,12 +4,10 @@ title: CnetOS7初始化
 date: 2020-06-11 05:23:52
 tags: [CentOS]
 categories: [Linux,CentOS]
+excerpt: 。。。
 ---
 
 ### 前言
-
-<!-- more -->
-
 ### 1. 查看服务器的CentOS版本
 
 ```BASH

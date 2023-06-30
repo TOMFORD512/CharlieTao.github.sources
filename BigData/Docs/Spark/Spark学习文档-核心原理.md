@@ -3,11 +3,10 @@ title: Spark学习文档--核心原理
 date: 2020-12-26 23:56:07
 tags: [Spark]
 categories: [Bigdata,Spark]
+excerpt: 。。。
 ---
 
 # 前言
-
-<!-- more -->
 
 # 消息通信原理
 

@@ -7,8 +7,6 @@ categories: [Bigdata,Spark]
 
 # 前言
 
-<!-- more -->
-
 # 概述
 
 ## 1. 什么是Spark？

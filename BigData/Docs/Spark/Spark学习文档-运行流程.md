@@ -7,8 +7,6 @@ categories: [Bigdata,Spark]
 
 # 前言
 
-<!-- more -->
-
 # 基本概念
 
 ## 1. Application

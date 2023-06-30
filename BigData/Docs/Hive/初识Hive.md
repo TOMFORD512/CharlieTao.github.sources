@@ -4,11 +4,10 @@ title: 初识Hive
 date: 2020-06-13 05:41:59
 tags: [Hive]
 categories: [Bigdata,Hive]
+excerpt: 。。。
 ---
 
 # 前言
-
-<!-- more -->
 
 # 什么是Hive？
 

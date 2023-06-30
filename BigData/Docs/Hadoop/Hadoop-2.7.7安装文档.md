@@ -4,14 +4,12 @@ title: Hadoop-2.7.7安装文档
 date: 2020-06-07 08:50:21
 tags: [Hadoop]
 categories: [Bigdata,Hadoop]
+excerpt: 。。。
 ---
 
 # 前言
 
-<!-- more -->
-
 # 前提条件
-
 1. 免密登录
 2. 关闭防⽕墙
 3. JDK的安装
@@ -20,8 +18,6 @@ categories: [Bigdata,Hadoop]
 >注：搭配的Spark版本是2.3.4
 
 # 角色分配
-
-
 | 机器名称         | bigdata001  | bigdata002  |  bigdata003 |
 |:-:              |     :-:     |:-:          |:-:          |
 |QuorumPeerMain   |       √     |  √          | √           |

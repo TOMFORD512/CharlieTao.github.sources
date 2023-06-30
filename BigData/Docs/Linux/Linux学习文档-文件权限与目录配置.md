@@ -9,8 +9,6 @@ excerpt: 。。。
 
 ## 前言
 
-<!-- more -->
-
 ## 1. 文件属性
 
 ![图一（文件属性示意图）](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Linux/%E6%96%87%E4%BB%B6%E5%B1%9E%E6%80%A7%E7%A4%BA%E6%84%8F%E5%9B%BE.png?raw=true)

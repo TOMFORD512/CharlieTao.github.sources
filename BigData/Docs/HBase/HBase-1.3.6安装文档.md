@@ -4,11 +4,10 @@ title: HBase-1.3.6安装文档
 date: 2020-06-07 22:09:46
 tags: [HBase]
 categories: [Bigdata,HBase]
+excerpt: 。。。
 ---
 
 # 前言
-
-<!-- more -->
 
 # 前提条件
 

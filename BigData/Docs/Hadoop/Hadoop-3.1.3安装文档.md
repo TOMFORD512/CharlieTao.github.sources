@@ -4,11 +4,11 @@ title: Hadoop-3.1.3安装文档
 date: 2020-06-17 08:50:21
 tags: [Hadoop]
 categories: [Bigdata,Hadoop]
+excerpt: 。。。
 ---
 
 # 前言
 
-<!-- more -->
 
 # 前提条件
 

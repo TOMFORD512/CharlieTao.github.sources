@@ -3,11 +3,10 @@ title: Spark学习文档--RDD编程
 date: 2020-12-28 23:44:11
 tags: [Spark]
 categories: [Bigdata,Spark]
+excerpt: 。。。
 ---
 
 # 前言
-
-<!-- more -->
 
 # RDD简介
 

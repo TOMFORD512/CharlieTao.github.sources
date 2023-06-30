@@ -9,8 +9,6 @@ excerpt: 。。。
 
 ### 前言
 
-<!-- more -->
-
 ### 1. 查看服务器的CentOS版本
 
 ```BASH

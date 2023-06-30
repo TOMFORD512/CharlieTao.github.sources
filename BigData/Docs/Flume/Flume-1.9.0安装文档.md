@@ -4,10 +4,9 @@ title: Flume-1.9.0安装文档
 date: 2020-06-05 23:28:09
 tags: [Flume]
 categories: [Bigdata,Flume]
+excerpt: 。。。
 ---
 # 前言
-
-<!-- more -->
 
 # 前提条件
 

@@ -3,6 +3,7 @@ title: Spark学习文档--初识Spark
 date: 2020-12-24 23:50:18
 tags: [Spark]
 categories: [Bigdata,Spark]
+excerpt: 。。。
 ---
 
 # 前言

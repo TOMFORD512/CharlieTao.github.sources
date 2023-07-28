@@ -4,10 +4,9 @@ title: Scala学习文档——容器
 date: 2020-06-05 09:02:57
 tags: [Scala]
 categories: [编程语言,Scala]
+excerpt: 。。。
 ---
 # 前言
-
-<!-- more -->
 
 # Collection （容器）
 

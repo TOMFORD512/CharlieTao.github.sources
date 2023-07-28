@@ -4,11 +4,10 @@ title: Scala概述
 date: 2020-06-04 09:02:57
 tags: [Scala]
 categories: [编程语言,Scala]
+excerpt: 。。。
 ---
 
 ### 前言
-
-<!-- more -->
 
 <!--Scala版本：2.12.11-->
 

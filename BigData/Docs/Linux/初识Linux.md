@@ -9,8 +9,6 @@ excerpt: 。。。
 
 ## 前言
 
-<!-- more -->
-
 ## 操作系统发展史
 
 ![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Linux/操作系统发展史.png?raw=true)

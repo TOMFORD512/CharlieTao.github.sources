@@ -52,17 +52,20 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-
 ### 1. Flume采集端口信息并打印到控制台
 
 - 检查是否安装telnlt，如果没有则安装测试工具**telnlt**
+
 ```bash
 sudo rpm -ivh telnet-server-0.17-59.el7.x86_64.rpm 
 sudo rpm -ivh telnet-0.17-59.el7.x86_64.rpm
 ```
 
 - 查看是否被占用，由于telnet的默认端口是44444
+
 ```bash
 netstat -an | grep 44444
 ```
 
 - 在job目录下创建**flume-telnet-logger.conf**文件
+
 ```properties	
 # 定义组件
 a1.sources = r1
@@ -87,6 +90,7 @@ a1.sources.r1.channels = c1
 a1.sinks.k1.channel = c1
 ```
 - 开启Flume进程（控制台运行）
+
 ```bash
 #控制台运行
 flume-ng agent -n a1 -c /home/TomFor/software/flume/conf/ -f /home/TomFor/software/flume/job/flume-telnet-logger.conf -Dflume.root.logger=info,console
@@ -99,6 +103,7 @@ flume-ng agent -n a1 -c /home/TomFor/software/flume/conf/ -f /home/TomFor/softwa
 
 
 - 打开新的窗口简历Telnet通话
+
 ```bash
 telnet localhost 44444
 ```

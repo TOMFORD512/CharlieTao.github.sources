@@ -30,7 +30,8 @@ wget https://mirror-hk.koddos.net/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.
 #Apache国内镜像下载
 wget https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz
 ```
-
+### 3. 解压
+> 将lib文件夹下的guava-11.0.2.jar删除以兼容Hadoop 3.1.3
 
 
 ## 三、配置
@@ -39,9 +40,10 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-
 ### 1. 创建conf-file文件
 > 注：推荐在Flume根目录下创建一个job文件夹，用于存放以后满足各种需求的conf-file文件
 
-### 2. 配置环境变量
-> 注：配置环境变量极为简单，这里不做赘述、
+### 2. 修改conf目录下的log4j.properties配置文件，配置日志文件路径
 
+### 3. 配置环境变量
+> 注：配置环境变量极为简单，这里不做赘述、
 
 
 ## 四、采集示例

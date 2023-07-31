@@ -193,7 +193,9 @@ hive --service metastore --hiveconf hive.root.logger=INFO,DRFA --hiveconf hive.l
 hive --service metastore --hiveconf hive.log4j.file
 ```
 
-- Hive启动脚本
+
+
+## 四、Hive相关服务启动脚本
 
 ```bash
 #! /bin/bash

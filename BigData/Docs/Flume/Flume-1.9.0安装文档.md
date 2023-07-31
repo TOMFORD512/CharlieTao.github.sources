@@ -24,6 +24,7 @@ excerpt: 。。。
 [Apache国内镜像下载](https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz)
 
 ### 2. 服务器本地下载
+
 ```bash
 #Apache Flume官网下载
 wget https://mirror-hk.koddos.net/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz
@@ -32,6 +33,7 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-
 ```
 ### 3. 解压
 > 将lib文件夹下的guava-11.0.2.jar删除以兼容Hadoop 3.1.3
+
 
 
 ## 三、配置
@@ -44,6 +46,7 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-
 
 ### 3. 配置环境变量
 > 注：配置环境变量极为简单，这里不做赘述、
+
 
 
 ## 四、采集示例
@@ -218,8 +221,35 @@ a2.sinks.k2.channel = c2
 ```bash
 #控制台运行
 flume-ng agent -n a2 -c /home/TomFor/software/flume/conf/ -f /home/TomFor/software/flume/job/flume-file-hdfs.conf -Dflume.root.logger=info,console
+
 #后台运行
 nohup flume-ng agent -n a2 -c /home/TomFor/software/flume/conf/ -f /home/TomFor/software/flume/job/flume-file-hdfs.conf >/dev/null 2>&1 &
+# 检查日志有新增数据时，HDFS上是否出现新文件。若有新文件产生，则Flume采集日志文件到HDFS完成
 ```
 
-- 检查日志有新增数据时，HDFS上是否出现新文件。若有新文件产生，则Flume采集日志文件到HDFS完成
+
+
+## 五、启动脚本
+
+```bash
+#!/bin/bash
+
+# Flume启动脚本
+
+case $1 in
+	"start" ) {
+		echo "------开始启动------"
+	for i in hadoop102 hadoop103;
+		do
+			ssh i "nohup /opt/moudle/flume/bin/flume-ng agent -n al -c ... >dev/null 2>&1 &"
+		done	
+	};;
+	"stop" ) {
+		echo "------开始关闭------"
+		do
+			ssh i "ps -ef | grep kafka_to_hdfs_log | grep -v grep | awk '{print \$2}' | xargs -n1 kill"
+		done
+	};;
+esac
+# 后续升级： 把conf和进程名称作为参数传进去，即可控制所有FLume采集任务的启停
+```

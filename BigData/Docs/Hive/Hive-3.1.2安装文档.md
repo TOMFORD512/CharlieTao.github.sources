@@ -16,11 +16,13 @@ excerpt: 。。。
 
 
 ## 二、下载
-
+---
 ### 1. 官网下载
-[Apache Hive官网下载](https://mirror-hk.koddos.net/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
-[Apache国内镜像下载](https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
 > 源码也是在这个连接下面下载
+
+- [Apache Hive官网下载](https://mirror-hk.koddos.net/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
+- [Apache国内镜像下载](https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
+
 ### 2. 服务器下载
 
 ```bash
@@ -36,14 +38,14 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1
 ### 1. 前提条件：[MySQL安装](安装连接)
 > 虽然Hive内置数据库管理元数据，但是一般都是单独配置到MySQL中，方便管理
 
-### 2. 将MySQL的JDBC驱动拷贝到Hive的lib目录下
+### 2. 拷贝JDBC驱动到Hive的lib目录下
 
 ```bash
 # 这里安装的MySQL版本是5，所以对应的JDBC驱动也需要对应，如果是mysql8同理，驱动下载参考MySQL安装一文
 cp mysql-connector-java-5.1.46.jar $HVIE/HOME/lib/
 ```
 
-### 3. 修改$HIVE_HOME/conf目录下的hive-site.xml文件
+### 3. 配置hive-site.xml文件
 
 ```xml
 <configuration>
@@ -105,7 +107,7 @@ cp mysql-connector-java-5.1.46.jar $HVIE/HOME/lib/
 </configuration>
 ```
 
-### 4. 配置$HIVE_HOME/conf目录下的hive-log4j2.properties
+### 4. 配置hive-log4j2.properties
 > 按需配置，目的是做好日志管理
 
 ### 5. 创建Hive元数据库
@@ -159,10 +161,12 @@ ALTER TABLE TABLE_PARAMS modify column PARAM_VALUE mediumtext character set utf8
 - 若出现日志Jar包冲突
 
 ```bash
-mv log4j-slf4j-impl-2.10.0.jar log4j-slf4j-impl-2.10.0.jar.bak
+mv $HIVE_HOME/lib/log4j-slf4j-impl-2.10.0.jar log4j-slf4j-impl-2.10.0.jar.bak
 ```
 
-## 运行
+
+
+## 四、运行
 
 - 测试
 
@@ -195,7 +199,7 @@ hive --service metastore --hiveconf hive.log4j.file
 
 
 
-## 四、Hive相关服务启动脚本
+## 五、Hive相关服务启动脚本
 
 ```bash
 #! /bin/bash

@@ -18,10 +18,9 @@ excerpt: 。。。
 
 ## 二、下载
 ---
-
 ### 1. 浏览器下载
-[Apache Flume官网下载](https://mirror-hk.koddos.net/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz)
-[Apache国内镜像下载](https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz)
+- [Apache Flume官网下载](https://mirror-hk.koddos.net/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz)
+- [Apache国内镜像下载](https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz)
 
 ### 2. 服务器本地下载
 

@@ -21,13 +21,14 @@ excerpt: 。。。
 > 源码也是在这个连接下面下载
 
 - [Apache Hive官网下载](https://mirror-hk.koddos.net/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
-- [Apache国内镜像下载](https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
+- [Apache Hive国内镜像下载](https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
 
 ### 2. 服务器下载
 
 ```bash
 #官网下载
 wget https://mirror-hk.koddos.net/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
+
 #国内镜像下载
 wget https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz
 ```
@@ -41,7 +42,7 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1
 ### 2. 拷贝JDBC驱动到Hive的lib目录下
 
 ```bash
-# 这里安装的MySQL版本是5，所以对应的JDBC驱动也需要对应，如果是mysql8同理，驱动下载参考MySQL安装一文
+# 这里安装的MySQL版本是5，所以JDBC驱动也需要对应，如果是mysql8的话同理，驱动下载参考MySQL安装一文
 cp mysql-connector-java-5.1.46.jar $HVIE/HOME/lib/
 ```
 
@@ -49,7 +50,6 @@ cp mysql-connector-java-5.1.46.jar $HVIE/HOME/lib/
 
 ```xml
 <configuration>
-    
     <property>
         <name>javax.jdo.option.ConnectionURL</name>
         <value>jdbc:mysql://bigdata2:3306/hive_metastore?createDatabaseIfNotExist=true&amp;useUnicode=true&amp;characterEncoding=UTF-8</value>
@@ -168,7 +168,7 @@ mv $HIVE_HOME/lib/log4j-slf4j-impl-2.10.0.jar log4j-slf4j-impl-2.10.0.jar.bak
 
 ## 四、运行
 
-- 测试
+### （1）测试
 
 ```bash
 # 启动Hive客户端
@@ -181,7 +181,7 @@ OK
 default
 ```
 
-- 使用DBeaver连接Hive
+### （2）使用DBeaver连接Hive
 
 ```bash
 # 开启元数据服务

@@ -41,17 +41,18 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-
 ### 1. 创建conf-file文件
 > 注：推荐在Flume根目录下创建一个job文件夹，用于存放以后满足各种需求的conf-file文件
 
-### 2. 修改conf目录下的log4j.properties配置文件，配置日志文件路径
+### 2. 配置log4j.properties配置文件
+> 按需配置，目的是做好日志管理
 
 ### 3. 配置环境变量
-> 注：配置环境变量极为简单，这里不做赘述、
+> 注：配置环境变量极为简单，这里不做赘述
 
 
 
 ## 四、采集示例
 ---
 
-> 注：Flume需要根据不同的业务配置不同的conf-flie，下面以三种不同类型的业务需求来了解 如何设置conf-file
+> 注：Flume需要根据不同的业务配置不同的conf-flie，下面以四种不同类型的业务需求来了解如何设置conf-file
 
 ### 1. Flume采集端口信息并打印到控制台
 
@@ -106,7 +107,7 @@ flume-ng agent -n a1 -c /home/TomFor/software/flume/conf/ -f /home/TomFor/softwa
 >  	3. -f		    表示用户自定义的配置文件（随业务需求而变）
 
 
-- 打开新的窗口简历Telnet通话
+- 打开新的窗口建立Telnet通话
 
 ```bash
 telnet localhost 44444
@@ -139,13 +140,16 @@ a1.channels.c1.kafka.topic = app_log
 # 是否组装为事件（header + body）
 a1.channels.c1.parseAsFlumeEvent = false
 
-# 断点续传有序
-a1.channels.c1.transactionCapacity = 1
-# # 控制每个事务中最多传输的小文件数量，以避免出现过多小文件导致的性能问题
-# #agent.sinks.sink1.batchSize
-
 #组装
 a1.sources.r1.channels = c1
+
+
+# 控制通道在一个事务中处理的事件数量
+# a1.channels.c1.transactionCapacity = 1
+# 控制Sink发送事件的批处理大小（小文件问题）
+# #agent.sinks.sink1.batchSize
+# 指定Kafka分区
+# channel.kafka.partition.key.header = timestamp, hostname
 ```
 
 - 开启Flume进程
@@ -252,3 +256,12 @@ case $1 in
 esac
 # 后续升级： 把conf和进程名称作为参数传进去，即可控制所有FLume采集任务的启停
 ```
+
+
+### 6. 其他
+
+- [Flume中文手册](https://flume.liyifeng.org/)
+- [基于Prometheus+Grafana打造企业级Flink监控系统](https://cloud.tencent.com/developer/article/1776334?areaSource=106005.5)
+- [Flume监控部署](https://blog.csdn.net/qq_41142053/article/details/124862598)
+- [Grafana+Prometheus的详解以及使用](https://zhuanlan.zhihu.com/p/351995351)
+- [基于Prometheus和Grafana的监控平台-环境搭建](https://www.cnblogs.com/zlslch/p/11706943.html)

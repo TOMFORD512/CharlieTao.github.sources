@@ -22,7 +22,7 @@ excerpt: 。。。
 
 # Hive内部架构
 
-![](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Hive/Hive内部架构.png?raw=true)
+![Hive内部架构](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Hive/Hive内部架构.png?raw=true)
 
 - Thrift Server：提供了一种让用户可以使用多种不同的语言来操作Hive
 

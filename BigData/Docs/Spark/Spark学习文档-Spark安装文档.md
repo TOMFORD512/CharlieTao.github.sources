@@ -6,19 +6,29 @@ categories: [Bigdata,Spark]
 excerpt: 。。。
 ---
 
-## 写在最前
+### 一、写在最前
+---
+
 >- Spark版本： 3.0.3
 >- Hadoop版本： 3.1.3
 >- Scala版本： 2.11.12
 
-## 下载及解压
+
+
+### 二、下载及解压
+---
+
 ```bash
 tar -zxvf spark-3.0.1-bin-hadoop3.2
 ```
 
-## 配置
 
-### 1.配置spark-env.sh
+
+### 三、配置
+---
+
+#### 1. 配置spark-env.sh
+
 ```bash
 cp spark-env.sh.template spark-env.sh
 
@@ -29,7 +39,8 @@ HADOOP_CONF_DIR=/data/hadoop/hadoop-3.1.2/etc/hadoop
 # zookeeper信息配置，知道所在节点地址信息
 SPARK_DAEMON_JAVA_OPTS="-Dspark.deploy.recoveryMode=ZOOKEEPER -Dspark.deploy.zookeeper.url=bigdata1:2181,bigdata2:2181,bigdata3:2181 -Dspark.deploy.zookeeper.dir=/spark3.0"
 ```
-### 2.配置slaves
+
+#### 2.配置slaves
 
 ```bash
 cp slaves.template slaves
@@ -41,7 +52,8 @@ bigdata2
 bigdata3
 ```
 
-### 3.拷贝至其他Worker节点
+#### 3.拷贝至其他Worker节点
+
 ```bash
 scp -r software/spark bigdata2:/home/TomFor/software/
 scp -r software/spark bigdata3:/home/TomFor/software/
@@ -49,8 +61,9 @@ scp -r software/spark bigdata3:/home/TomFor/software/
 for A in {2..3}; do scp -r software/spark bigdata$A:/home/TomFor/software/;done
 ```
 
-### 4.配置Spark On Yarn
+#### 4.配置Spark On Yarn
 在Hadoop集群的`yarn-site.xml`中添加以下配置
+
 ```properties
 <property>
   <name>yarn.nodemanager.pmem-check-enabled</name>
@@ -62,7 +75,8 @@ for A in {2..3}; do scp -r software/spark bigdata$A:/home/TomFor/software/;done
 </property>
 ```
 
-### 5.配置历史服务器
+#### 5.配置历史服务器
+
 ```bash
 # 配置历史服务器的原因在于： 可以查看整个Spark任务的执行情况，是否出现数据倾斜等；否则当Spark任务执行完了之后就无法查看了
 # 修改spark default.conf文件，配置日志存储路径
@@ -84,9 +98,10 @@ spark.history.ui.port=18080
 export SPARK_HISTORY_OPTS="-Dspark.history.ui.port=18080 -Dspark.history.fs.logDirectory=hdfs://ns1:8020/spark-history-server -Dspark.history.retainedApplications=30"
 ```
 
-## 启动
+### 四、启动
+---
 
-### 1.启动Spark集群
+#### 1.启动Spark集群
 >由于配置了Spark On Yarn，所以这里要先启动Hadoop集群
 
 ```bash
@@ -97,12 +112,16 @@ start-all-spark.sh
 start-master.sh
 ```
 
-### 2. 启动Spark的历史服务进程
+#### 2. 启动Spark的历史服务进程
 ```bash
 # 因为之前配置了启动historyServer的机器的Host（spark.yarn.historyServer.address），所以这里在Bigdata3上执行以下命令
 start-history-server.sh
 ```
 
-## 测试
-### 1.测试Master的高可用
-### 2.测试history-server
+
+
+### 五、测试
+---
+
+#### 1.测试Master的高可用
+#### 2.测试history-server

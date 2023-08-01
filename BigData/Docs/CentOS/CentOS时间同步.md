@@ -8,7 +8,7 @@ password: 5201314
 excerpt: 。。。
 ---
 
-# 前言
+### 前言
 
 >本文所述的CnetOS时间同步方法用于CDH安装时准备工作。以下是服务器的一些基本信息:
 >1. 环境：自建虚拟机
@@ -17,14 +17,14 @@ excerpt: 。。。
 >4. 同步频率：开机自动同步
 
 
-# NTP安装与配置
+### NTP安装与配置
 
-## 1. 下载
+#### 1. 下载
 ```bash
 yum -y install ntp
 ```
 
-## 2. 修改配置文件(/etc/ntp.conf）
+#### 2. 修改配置文件(/etc/ntp.conf）
 
 ```properties
 #注释掉一下内容：
@@ -39,25 +39,25 @@ server ntp.aliyun.com
 server ntp.aliyun.com
 ```
 
-## 3. 开启服务
+#### 3. 开启服务
 
 ```bash
 systemctl start ntpd
 ```
 
-## 4. 设置NTP服务开机自启
+#### 4. 设置NTP服务开机自启
 
 ```bash
 systemctl enable ntpd
 ```
 
-## 5. 将系统时钟同步到NTP服务器
+#### 5. 将系统时钟同步到NTP服务器
 
 ```bash
 ntpdate -u ntp.aliyun.com
 ```
 
-## 6. 将硬件时钟与系统时钟同步
+#### 6. 将硬件时钟与系统时钟同步
 
 ```bash
 hwclock --systohc

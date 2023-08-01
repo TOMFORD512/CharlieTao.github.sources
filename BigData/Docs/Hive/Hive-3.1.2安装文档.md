@@ -7,7 +7,7 @@ categories: [Bigdata,Hive]
 excerpt: 。。。
 ---
 
-## 一、写在最前
+### 一、写在最前
 ---
 > CentOS版本： CentOS Linux release 7.9.2009 (Core)
 > jdk版本： 1.8
@@ -15,15 +15,15 @@ excerpt: 。。。
 
 
 
-## 二、下载
+### 二、下载
 ---
-### 1. 官网下载
+#### 1. 官网下载
 > 源码也是在这个连接下面下载
 
 - [Apache Hive官网下载](https://mirror-hk.koddos.net/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
 - [Apache Hive国内镜像下载](https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1.2-bin.tar.gz)
 
-### 2. 服务器下载
+#### 2. 服务器下载
 
 ```bash
 #官网下载
@@ -34,19 +34,19 @@ wget https://mirrors.tuna.tsinghua.edu.cn/apache/hive/hive-3.1.2/apache-hive-3.1
 ```
 
 
-## 三、配置
+### 三、配置
 
-### 1. 前提条件：[MySQL安装](安装连接)
+#### 1. 前提条件：[MySQL安装](安装连接)
 > 虽然Hive内置数据库管理元数据，但是一般都是单独配置到MySQL中，方便管理
 
-### 2. 拷贝JDBC驱动到Hive的lib目录下
+#### 2. 拷贝JDBC驱动到Hive的lib目录下
 
 ```bash
 # 这里安装的MySQL版本是5，所以JDBC驱动也需要对应，如果是mysql8的话同理，驱动下载参考MySQL安装一文
 cp mysql-connector-java-5.1.46.jar $HVIE/HOME/lib/
 ```
 
-### 3. 配置hive-site.xml文件
+#### 3. 配置hive-site.xml文件
 
 ```xml
 <configuration>
@@ -107,17 +107,17 @@ cp mysql-connector-java-5.1.46.jar $HVIE/HOME/lib/
 </configuration>
 ```
 
-### 4. 配置hive-log4j2.properties
+#### 4. 配置hive-log4j2.properties
 > 按需配置，目的是做好日志管理
 
-### 5. 创建Hive元数据库
+#### 5. 创建Hive元数据库
 
 ```sql
 -- 这里的数据库名称应该要和hive-site.xml数据库链接地址中的数据库名称保持一致
 CREATE DATABASE hive_metastore;
 ```
 
-### 6. 创建外部访问元数据的用户并授权
+#### 6. 创建外部访问元数据的用户并授权
 > 外部访问是指：DBeaver、Java等
 
 ```SQL
@@ -138,13 +138,13 @@ FLUSH PRIVILEGES;
 -- 使用root用户连接Hive Metastore: GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY 'root' WITH GRANT OPTION;
 ```
 
-### 7. 初始化Hive元数据库
+#### 7. 初始化Hive元数据库
 
 ```bash
 schematool -initSchema -dbType mysql -verbose
 ```
 
-### 8. 修改元数据库字符集
+#### 8. 修改元数据库字符集
 >发现乱码时再改也可
 
 ```sql
@@ -155,9 +155,9 @@ ALTER TABLE COLUMNS_V2 modify column COMMENT VARCHAR(256) character set utf8;
 ALTER TABLE TABLE_PARAMS modify column PARAM_VALUE mediumtext character set utf8;
 ```
 
-### 9. 添加环境变量$HIVE_HOME
+#### 9. 添加环境变量$HIVE_HOME
 
-### 10. 其他
+#### 10. 其他
 - 若出现日志Jar包冲突
 
 ```bash
@@ -166,9 +166,9 @@ mv $HIVE_HOME/lib/log4j-slf4j-impl-2.10.0.jar log4j-slf4j-impl-2.10.0.jar.bak
 
 
 
-## 四、运行
+### 四、运行
 
-### （1）测试
+#### 1. 测试
 
 ```bash
 # 启动Hive客户端
@@ -181,7 +181,7 @@ OK
 default
 ```
 
-### （2）使用DBeaver连接Hive
+#### 2. 使用DBeaver连接Hive
 
 ```bash
 # 开启元数据服务
@@ -199,7 +199,7 @@ hive --service metastore --hiveconf hive.log4j.file
 
 
 
-## 五、Hive相关服务启动脚本
+### 五、Hive相关服务启动脚本
 
 ```bash
 #! /bin/bash

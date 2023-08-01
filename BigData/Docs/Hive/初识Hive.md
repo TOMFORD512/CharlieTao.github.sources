@@ -7,20 +7,30 @@ categories: [Bigdata,Hive]
 excerpt: 。。。
 ---
 
-# 前言
+### 前言
+---
 
-# 什么是Hive？
+
+
+### 什么是Hive？
+---
 
 1. 由Facebook实现并开源、基于Hadoop的**数据仓库的工具**
 2. 提供HQL（Hive SQL）查询功能
 3. Hive本质上是将SQL**翻译**转换成MapReduce任务执行
 
-# 为什么使用Hive（MapReduce、Spark）？
+
+
+### 为什么使用Hive（MapReduce、Spark）？
+---
 
 1. MR在实现复杂逻辑查询的时候，成本高、难度大。
 2. Spark对集群资源更高（基于内存）
 
-# Hive内部架构
+
+
+### Hive内部架构
+---
 
 ![Hive内部架构](https://github.com/CharlieTao/CharlieTao.github.sources/blob/master/BigData/Pictures/Hive/Hive内部架构.png?raw=true)
 

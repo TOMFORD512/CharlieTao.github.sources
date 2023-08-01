@@ -7,7 +7,7 @@ categories: [Bigdata,Flume]
 excerpt: 。。。
 ---
 
-## 一、写在最前
+### 一、写在最前
 ---
 > CentOS版本： CentOS Linux release 7.9.2009 (Core)
 > jdk版本： 1.8
@@ -16,13 +16,13 @@ excerpt: 。。。
 
 
 
-## 二、下载
+### 二、下载
 ---
 ### 1. 浏览器下载
 - [Apache Flume官网下载](https://mirror-hk.koddos.net/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz)
 - [Apache国内镜像下载](https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz)
 
-### 2. 服务器本地下载
+#### 2. 服务器本地下载
 
 ```bash
 #Apache Flume官网下载
@@ -30,31 +30,31 @@ wget https://mirror-hk.koddos.net/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.
 #Apache国内镜像下载
 wget https://mirrors.tuna.tsinghua.edu.cn/apache/flume/1.9.0/apache-flume-1.9.0-bin.tar.gz
 ```
-### 3. 解压
+#### 3. 解压
 > 将lib文件夹下的guava-11.0.2.jar删除以兼容Hadoop 3.1.3
 
 
 
-## 三、配置
+### 三、配置
 ---
 
-### 1. 创建conf-file文件
+#### 1. 创建conf-file文件
 > 注：推荐在Flume根目录下创建一个job文件夹，用于存放以后满足各种需求的conf-file文件
 
-### 2. 配置log4j.properties配置文件
+#### 2. 配置log4j.properties配置文件
 > 按需配置，目的是做好日志管理
 
-### 3. 配置环境变量
+#### 3. 配置环境变量
 > 注：配置环境变量极为简单，这里不做赘述
 
 
 
-## 四、采集示例
+### 四、采集示例
 ---
 
 > 注：Flume需要根据不同的业务配置不同的conf-flie，下面以四种不同类型的业务需求来了解如何设置conf-file
 
-### 1. Flume采集端口信息并打印到控制台
+#### 1. Flume采集端口信息并打印到控制台
 
 - 检查是否安装telnlt，如果没有则安装测试工具**telnlt**
 
@@ -115,7 +115,7 @@ telnet localhost 44444
 - 在telnet端输入数据，在Flume监听端就可以接收到，至此Flume监听端口信息采集数据到控制台完成
 
 
-### 2. Flume采集日志文件到Kafka
+#### 2. Flume采集日志文件到Kafka
 
 - 编写conf-file文件**flume-kafka.conf**
 
@@ -165,10 +165,10 @@ nohup flume-ng agent -n a1 -c /home/TomFor/software/flume/conf/ -f /home/TomFor/
 - 开启一个Kafka控制台消费者进程，当日志有新增数据时，控制台上是否有数据显示。若有数据显示，则Flume采集日志文件到Kafka完成
 
 
-### 3. Flume采集Kafka数据到HDFS
+#### 3. Flume采集Kafka数据到HDFS
 
 
-### 4. Flume采集日志文件到HDFS
+#### 4. Flume采集日志文件到HDFS
 
 - 编写conf-file文件**flume-file-hdfs.conf**
 
@@ -232,7 +232,7 @@ nohup flume-ng agent -n a2 -c /home/TomFor/software/flume/conf/ -f /home/TomFor/
 
 
 
-## 五、启动脚本
+### 五、启动脚本
 
 ```bash
 #!/bin/bash
@@ -258,7 +258,7 @@ esac
 ```
 
 
-### 6. 其他
+### 六、其他
 
 - [Flume中文手册](https://flume.liyifeng.org/)
 - [基于Prometheus+Grafana打造企业级Flink监控系统](https://cloud.tencent.com/developer/article/1776334?areaSource=106005.5)

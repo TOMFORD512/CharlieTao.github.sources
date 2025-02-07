@@ -194,7 +194,7 @@ server-id = 1
 log-bin=mysql-bin
 
 # binlog类型
-binlog_format=row
+binlog-format=row
 
 # 启用binlog的数据库，需根据实际情况作出修改
 binlog-do-db=gmall
